@@ -7,7 +7,7 @@
 ndex_create_group(ndexcon, groupName, image, website, description, properties)
 }
 \arguments{
-\item{ndexcon}{object of class NDExConnection link{ndex_connect}}
+\item{ndexcon}{object of class NDExConnection \link{ndex_connect}}
 
 \item{groupName}{character; name of the new graoup}
 

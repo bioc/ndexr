@@ -20,7 +20,7 @@ ndex_create_user(
 )
 }
 \arguments{
-\item{ndexcon}{object of class NDExConnection link{ndex_connect}}
+\item{ndexcon}{object of class NDExConnection \link{ndex_connect}}
 
 \item{userName}{character; name of the new user}
 

@@ -26,7 +26,7 @@
 #' This functions searches the public networks on an NDEx server for networks containing the supplied search string. T
 #' his search can be limited to certain accounts as well as in length.
 #' 
-#' @param ndexcon object of class NDExConnection link{ndex_connect}
+#' @param ndexcon object of class NDExConnection \link{ndex_connect}
 #' @param searchString string by which to search
 #' @param accountName string (optional); constrain search to networks administered by this account
 #' @param start integer (optional); specifies that the result is the nth page of the requested data. The default value is 0

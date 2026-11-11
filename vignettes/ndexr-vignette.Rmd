@@ -620,9 +620,9 @@ It is also possible to write an own configuration in yaml (or convert
 the function `ndexr:::yamlToRConfig()`
 
 Note: For package maintenance it is advised to add new versions as yaml
-definitions in `/R/ndex_api_config.yml` (for example as \"Version\_3.0\") and update the R code in `/R/ndex_api_config.r`, which defines the `ndex_config` object.
+definitions in `/data-raw/ndex_api_config.yml` (for example as \"Version\_3.0\") and update the R code in `/R/ndex_api_config.r`, which defines the `ndex_config` object.
 ```{r, eval=FALSE}
-yamlToRConfig = function(yamlFile='R/ndex_api_config.yml', rScriptFile='R/ndex_api_config.r', defaultHeader=ndex_conf_header){
+yamlToRConfig = function(yamlFile='data-raw/ndex_api_config.yml', rScriptFile='R/ndex_api_config.r', defaultHeader=ndex_conf_header){
   yamlObj = yaml::yaml.load_file(yamlFile)
   rCodeTxt = paste0(defaultHeader, listToRCode(yamlObj))
   outFile = file(rScriptFile)
@@ -631,4 +631,10 @@ yamlToRConfig = function(yamlFile='R/ndex_api_config.yml', rScriptFile='R/ndex_a
 }
 
 yamlToRConfig()
+```
+
+
+## Session info
+```{r}
+sessionInfo()
 ```

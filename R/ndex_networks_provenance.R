@@ -19,7 +19,7 @@
 #' 
 #' This function retrieves the provenance of the network identified by the supplied network UUID string.
 #' 
-#' @param ndexcon object of class NDExConnection link{ndex_connect}
+#' @param ndexcon object of class NDExConnection \link{ndex_connect}
 #' @param networkId unique ID of the network
 #' 
 #' @return List of network metadata: ID, name, whether it is public, edge and node count; source and format of network
@@ -56,7 +56,7 @@ ndex_network_get_provenance <- function(ndexcon, networkId){
 ## 
 ## Updates the 'provenance' field of the network specified by 'networkId' to be the ProvenanceEntity object in the PUT data. The ProvenanceEntity object is expected to represent the current state of the network and to contain a tree-structure of ProvenanceEvent and ProvenanceEntity objects that describe the networks provenance history.
 ## 
-## @param ndexcon object of class NDExConnection link{ndex_connect}
+## @param ndexcon object of class NDExConnection \link{ndex_connect}
 ## @param networkId character; unique ID (UUID) of the network
 ## @param provenance NDEx provanance object
 ## 

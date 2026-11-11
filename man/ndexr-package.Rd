@@ -55,6 +55,14 @@ networkId <- ndex_update_network(ndexcon, rcx)
 ndex_delete_network(ndexcon, networkId)
 }
 }
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://github.com/frankkramer-lab/ndexr}
+  \item Report bugs at \url{https://github.com/frankkramer-lab/ndexr/issues}
+}
+
+}
 \author{
 Florian Auer \email{florian.auer@informatik.uni-augsburg.de}
 
@@ -62,4 +70,5 @@ Zaynab Hammoud \email{zaynab.hammoud@informatik.uni-augsburg.de}
 
 Frank Kramer \email{frank.kramer@informatik.uni-augsburg.de}
 }
+\keyword{internal}
 \keyword{package}

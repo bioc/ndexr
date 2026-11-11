@@ -7,7 +7,7 @@
 ndex_network_aspect_get_metadata(ndexcon, networkId, aspect)
 }
 \arguments{
-\item{ndexcon}{object of class NDExConnection link{ndex_connect}}
+\item{ndexcon}{object of class NDExConnection \link{ndex_connect}}
 
 \item{networkId}{character; unique ID (UUID) of the network}
 

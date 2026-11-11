@@ -23,7 +23,7 @@
 #' 
 #' This function retrieves the summary of the network identified by the supplied network UUID string.
 #' 
-#' @param ndexcon object of class NDExConnection link{ndex_connect}
+#' @param ndexcon object of class NDExConnection \link{ndex_connect}
 #' @param networkId unique ID of the network
 #' 
 #' @return List of network metadata: ID, name, whether it is public, edge and node count; source and format of network
@@ -62,7 +62,7 @@ ndex_network_get_summary <- function(ndexcon, networkId){
 #' Edges use primary ID of the base term ('predicate', or 'p' element)
 #' Mapping table for the nodes is retrieved ('alias' and 'related' terms) to facilitate conversions/data mapping
 #' 
-#' @param ndexcon object of class NDExConnection link{ndex_connect}
+#' @param ndexcon object of class NDExConnection \link{ndex_connect}
 #' @param networkId unique ID of the network
 #' 
 #' @return \code{\link[RCX]{RCX-object}} object
@@ -96,7 +96,7 @@ ndex_get_network <- function(ndexcon, networkId){
 #' 
 #' \strong{Note: In future `ndexr` uses the \link[RCX]{RCX-object} from the corresponding package to handle the networks!}
 #' 
-#' @param ndexcon object of class NDExConnection link{ndex_connect}
+#' @param ndexcon object of class NDExConnection \link{ndex_connect}
 #' @param rcx \code{\link[RCX]{RCX-object}} object
 #' 
 #' @return UUID of the newly created network
@@ -143,7 +143,7 @@ ndex_create_network <- function(ndexcon, rcx){
 #' This method updates/replaces a existing network on the NDEx server with new content from the given RCX object.
 #' The UUID can either be specified manually or it will be extracted from the RCX object (i.e. from rcx$ndexStatus$externalId).
 #' 
-#' @param ndexcon object of class NDExConnection link{ndex_connect}
+#' @param ndexcon object of class NDExConnection \link{ndex_connect}
 #' @param rcx \code{\link[RCX]{RCX-object}} object
 #' @param networkId (optional); unique ID of the network
 #' 
@@ -191,7 +191,7 @@ ndex_update_network <- function(ndexcon, rcx, networkId){
 
 #' Delete a network
 #' 
-#' @param ndexcon object of class NDExConnection link{ndex_connect}
+#' @param ndexcon object of class NDExConnection \link{ndex_connect}
 #' @param networkId unique ID of the network
 #' 
 #' @return NULL on success; Error else

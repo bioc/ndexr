@@ -7,7 +7,7 @@
 ndex_network_delete_permission(ndexcon, networkId, user = NULL, group = NULL)
 }
 \arguments{
-\item{ndexcon}{object of class NDExConnection link{ndex_connect}}
+\item{ndexcon}{object of class NDExConnection \link{ndex_connect}}
 
 \item{networkId}{unique ID of the network}
 

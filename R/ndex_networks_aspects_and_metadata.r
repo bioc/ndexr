@@ -27,7 +27,7 @@
 #' \strong{Note: In future `ndexr` uses the \link[RCX]{RCX-object} from the corresponding package to handle the networks!}
 #' \strong{See also \link[RCX]{Meta-data} for more information.}
 #' 
-#' @param ndexcon object of class NDExConnection link{ndex_connect}
+#' @param ndexcon object of class NDExConnection \link{ndex_connect}
 #' @param networkId character; unique ID (UUID) of the network
 #' 
 #' @return metadata as list: consistencyGroup, elementCount, lastUpdate, name, properties, version and idCounter
@@ -59,7 +59,7 @@ ndex_network_get_metadata <- function(ndexcon, networkId){
 #' 
 #' This function retrieves the metadata associated with the supplied network UUID.
 #' 
-#' @param ndexcon object of class NDExConnection link{ndex_connect}
+#' @param ndexcon object of class NDExConnection \link{ndex_connect}
 #' @param networkId character; unique ID (UUID) of the network
 #' @param aspect character; aspect name
 #' 
@@ -93,7 +93,7 @@ ndex_network_aspect_get_metadata <- function(ndexcon, networkId, aspect){
 #' 
 #' \strong{Note: In future `ndexr` uses the \link[RCX]{RCX-object} from the corresponding package to handle the networks!}
 #' 
-#' @param ndexcon object of class NDExConnection link{ndex_connect}
+#' @param ndexcon object of class NDExConnection \link{ndex_connect}
 #' @param networkId character; unique ID of the network
 #' @param aspect character; name of the aspect
 #' @param size integer; specifies the number of elements returned
@@ -155,7 +155,7 @@ ndex_network_get_aspect <- function(ndexcon, networkId, aspect, size){
 #' 
 #' This function updates an aspect with the provided CX for the aspect.
 #' 
-#' @param ndexcon object of class NDExConnection link{ndex_connect}
+#' @param ndexcon object of class NDExConnection \link{ndex_connect}
 #' @param networkId unique ID of the network
 #' @param aspectName name of the aspect
 #' @param aspectAsRCX rcx data for the aspect (rcx[[aspectName]])

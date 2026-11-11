@@ -7,7 +7,7 @@
 ndex_group_list_users(ndexcon, groupId, type = NULL, start = NULL, size = NULL)
 }
 \arguments{
-\item{ndexcon}{object of class NDExConnection link{ndex_connect}}
+\item{ndexcon}{object of class NDExConnection \link{ndex_connect}}
 
 \item{groupId}{character; unique ID (UUID) of the group}
 

@@ -7,7 +7,7 @@
 ndex_network_get_permission(ndexcon, networkId, type, permission, start, size)
 }
 \arguments{
-\item{ndexcon}{object of class NDExConnection link{ndex_connect}}
+\item{ndexcon}{object of class NDExConnection \link{ndex_connect}}
 
 \item{networkId}{unique ID of the network}
 

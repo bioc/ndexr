@@ -24,7 +24,7 @@
 #' 
 #' Returns a SearchResult object which contains an array of Group objects
 #' 
-#' @param ndexcon object of class NDExConnection link{ndex_connect}
+#' @param ndexcon object of class NDExConnection \link{ndex_connect}
 #' @param searchString string by which to search
 #' @param start integer (optional); specifies that the result is the nth page of the requested data. The default value is 0
 #' @param size integer (optional); specifies the number of data items in each page. The default value is 100
@@ -75,7 +75,7 @@ ndex_find_groups <- function(ndexcon, searchString="", start, size){
 
 #' Get a Group
 #' 
-#' @param ndexcon object of class NDExConnection link{ndex_connect}
+#' @param ndexcon object of class NDExConnection \link{ndex_connect}
 #' @param groupId character; unique ID (UUID) of the group
 #' 
 #' @return list of properties describing the group (externalId, emailAddress, website, etc.). Throws error (404) if group isn't found!
@@ -91,7 +91,9 @@ ndex_find_groups <- function(ndexcon, searchString="", start, size){
 #' groups = ndex_find_groups(ndexcon,"Ideker Lab")
 #' groupId = groups[1,"externalId"]
 #' ## Get group information
-#' group = ndex_get_group(ndexcon, groupId)
+#' if(!is.null(groupId)){
+#'     group = ndex_get_group(ndexcon, groupId)
+#' }
 #' @export
 ndex_get_group <- function(ndexcon, groupId) {
     api = ndex_helper_getApi(ndexcon, 'group$get')
@@ -106,7 +108,7 @@ ndex_get_group <- function(ndexcon, groupId) {
 #' 
 #' Create a group owned by the authenticated user based on the supplied group JSON object.
 #' 
-#' @param ndexcon object of class NDExConnection link{ndex_connect}
+#' @param ndexcon object of class NDExConnection \link{ndex_connect}
 #' @param groupName character; name of the new graoup
 #' @param image character (optional); URL of the account owner's image
 #' @param website character (optional); URL of the account owner's web site
@@ -158,7 +160,7 @@ ndex_create_group <- function(ndexcon, groupName, image, website, description, p
 #' 
 #' Delete the group specified by groupId
 #' 
-#' @param ndexcon object of class NDExConnection link{ndex_connect}
+#' @param ndexcon object of class NDExConnection \link{ndex_connect}
 #' @param groupId character; unique ID (UUID) of the group
 #' 
 #' @return NULL if successfull, else an error is thrown
@@ -192,7 +194,7 @@ ndex_delete_group <- function(ndexcon, groupId) {
 #' 
 #' Updates the group based on the data.
 #' 
-#' @param ndexcon object of class NDExConnection link{ndex_connect}
+#' @param ndexcon object of class NDExConnection \link{ndex_connect}
 #' @param groupId character; unique ID (UUID) of the group
 #' @param groupName character; name of the new graoup
 #' @param image character (optional); URL of the account owner's image.
@@ -252,7 +254,7 @@ ndex_update_group <- function(ndexcon, groupId, groupName, image, website, descr
 #' 
 #' Updates the membership corresponding to the GroupMembership type specified in the URL parameter.
 #' 
-#' @param ndexcon object of class NDExConnection link{ndex_connect}
+#' @param ndexcon object of class NDExConnection \link{ndex_connect}
 #' @param groupId character; unique ID (UUID) of the group
 #' @param userId character; unique ID (UUID) of the user
 #' @param type character (optional)("GROUPADMIN"|"MEMBER")(default: "MEMBER"); Type of group membership 
@@ -300,7 +302,7 @@ ndex_group_set_membership <- function(ndexcon, groupId, userId, type='MEMBER') {
 #' 
 #' Removes the member from the group
 #' 
-#' @param ndexcon object of class NDExConnection link{ndex_connect}
+#' @param ndexcon object of class NDExConnection \link{ndex_connect}
 #' @param groupId character; unique ID (UUID) of the group
 #' @param userId character; unique ID (UUID) of the user
 #'
@@ -341,7 +343,7 @@ ndex_group_delete_membership <- function(ndexcon, groupId, userId) {
 
 #' Get Members of a Group
 #'  
-#' @param ndexcon object of class NDExConnection link{ndex_connect}
+#' @param ndexcon object of class NDExConnection \link{ndex_connect}
 #' @param groupId character; unique ID (UUID) of the group
 #' @param type character (optional); constrains the type of the returned membership. If not set (or NULL), all permission types will be returned. 
 #' @param start integer (optional); specifies that the result is the nth page of the requested data.
@@ -378,7 +380,7 @@ ndex_group_list_users <- function(ndexcon, groupId, type=NULL, start=NULL, size=
 
 #' Get Network Permissions of a Group
 #'  
-#' @param ndexcon object of class NDExConnection link{ndex_connect}
+#' @param ndexcon object of class NDExConnection \link{ndex_connect}
 #' @param groupId character; unique ID (UUID) of the group
 #' @param permission character (optional) ("WRITE"|"READ) (default: "READ"); constrains the type of the returned permission.
 #' @param start integer (optional); specifies that the result is the nth page of the requested data.
@@ -397,8 +399,10 @@ ndex_group_list_users <- function(ndexcon, groupId, type=NULL, start=NULL, size=
 #' groups = ndex_find_groups(ndexcon,"Ideker Lab")
 #' groupId = groups[1,"externalId"]
 #' ## List networks of the group
-#' networks = ndex_group_list_networks(ndexcon, groupId)
-#' networks = ndex_group_list_networks(ndexcon, groupId, permission='READ', start=0, size=10)
+#' if(!is.null(groupId)){
+#'     networks = ndex_group_list_networks(ndexcon, groupId)
+#'     networks = ndex_group_list_networks(ndexcon, groupId, permission='READ', start=0, size=10)
+#' }
 #' @export
 ndex_group_list_networks <- function(ndexcon, groupId, permission=NULL, start=NULL, size=NULL) {
     api = ndex_helper_getApi(ndexcon, 'group$network$list')
@@ -427,10 +431,12 @@ ndex_group_list_networks <- function(ndexcon, groupId, permission=NULL, start=NU
 #' groups = ndex_find_groups(ndexcon,"Ideker Lab")
 #' groupId = groups[1,"externalId"]
 #' ## List networks of the group
-#' networks = ndex_group_list_networks(ndexcon, groupId)
-#' networkId = names(networks)[1]
-#' ## Get group's permission to the network
-#' #group = ndex_group_network_get_permission(ndexcon, groupId, networkId)
+#' if(!is.null(groupId)){
+#'     networks = ndex_group_list_networks(ndexcon, groupId)
+#'     networkId = names(networks)[1]
+#'     ## Get group's permission to the network
+#'     #group = ndex_group_network_get_permission(ndexcon, groupId, networkId)
+#' }
 #' @export
 ndex_group_network_get_permission <- function(ndexcon, groupId, networkId) {
     api = ndex_helper_getApi(ndexcon, 'group$network$get')

@@ -13,7 +13,7 @@ ndex_group_list_networks(
 )
 }
 \arguments{
-\item{ndexcon}{object of class NDExConnection link{ndex_connect}}
+\item{ndexcon}{object of class NDExConnection \link{ndex_connect}}
 
 \item{groupId}{character; unique ID (UUID) of the group}
 
@@ -44,6 +44,8 @@ ndexcon = ndex_connect()
 groups = ndex_find_groups(ndexcon,"Ideker Lab")
 groupId = groups[1,"externalId"]
 ## List networks of the group
-networks = ndex_group_list_networks(ndexcon, groupId)
-networks = ndex_group_list_networks(ndexcon, groupId, permission='READ', start=0, size=10)
+if(!is.null(groupId)){
+    networks = ndex_group_list_networks(ndexcon, groupId)
+    networks = ndex_group_list_networks(ndexcon, groupId, permission='READ', start=0, size=10)
+}
 }

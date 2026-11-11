@@ -7,7 +7,7 @@
 ndex_user_show_permission(ndexcon, userId, networkId, directonly = FALSE)
 }
 \arguments{
-\item{ndexcon}{object of class NDExConnection link{ndex_connect}}
+\item{ndexcon}{object of class NDExConnection \link{ndex_connect}}
 
 \item{userId}{character; unique ID (UUID) of the user}
 

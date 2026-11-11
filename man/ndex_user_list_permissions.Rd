@@ -14,7 +14,7 @@ ndex_user_list_permissions(
 )
 }
 \arguments{
-\item{ndexcon}{object of class NDExConnection link{ndex_connect}}
+\item{ndexcon}{object of class NDExConnection \link{ndex_connect}}
 
 \item{userId}{character; unique ID (UUID) of the user}
 

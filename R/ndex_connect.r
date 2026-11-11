@@ -194,7 +194,7 @@ print.NDExConnection <- function(x,...){
 #' }
 ndex_rest_GET <- function(ndexcon, route, raw = FALSE){
   url <- paste0(ndexcon$url, route)
-  header = httr::add_headers("User-Agent"=paste0(httr:::default_ua(),
+  header = httr::add_headers("User-Agent"=paste0(ndex_default_ua(),
                                                  " ndexr/",
                                                  packageVersion("ndexr")))
   auth <- NULL
@@ -242,7 +242,7 @@ ndex_rest_GET <- function(ndexcon, route, raw = FALSE){
 #' }
 ndex_rest_POST <- function(ndexcon, route, data, multipart = FALSE, raw = FALSE){
   url <- paste0(ndexcon$url, route)
-  header = httr::add_headers("User-Agent"=paste0(httr:::default_ua(),
+  header = httr::add_headers("User-Agent"=paste0(ndex_default_ua(),
                                                  " ndexr/",
                                                  packageVersion("ndexr")))
   auth <- NULL
@@ -294,7 +294,7 @@ ndex_rest_POST <- function(ndexcon, route, data, multipart = FALSE, raw = FALSE)
 #' }
 ndex_rest_PUT <- function(ndexcon, route, data=NULL, multipart = FALSE, raw = FALSE){
     url <- paste0(ndexcon$url, route)
-    header = httr::add_headers("User-Agent"=paste0(httr:::default_ua(),
+    header = httr::add_headers("User-Agent"=paste0(ndex_default_ua(),
                                                  " ndexr/",
                                                  packageVersion("ndexr")))
     auth <- NULL
@@ -341,7 +341,7 @@ ndex_rest_PUT <- function(ndexcon, route, data=NULL, multipart = FALSE, raw = FA
 #' }
 ndex_rest_DELETE <- function(ndexcon, route, raw = FALSE){
   url <- paste0(ndexcon$url, route)
-  header = httr::add_headers("User-Agent"=paste0(httr:::default_ua(),
+  header = httr::add_headers("User-Agent"=paste0(ndex_default_ua(),
                                                  " ndexr/",
                                                  packageVersion("ndexr")))
   auth <- NULL

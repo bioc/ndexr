@@ -25,7 +25,7 @@
 #' 
 #' Returns a SearchResult object which contains an array of User objects
 #' 
-#' @param ndexcon object of class NDExConnection link{ndex_connect}
+#' @param ndexcon object of class NDExConnection \link{ndex_connect}
 #' @param searchString string by which to search
 #' @param start integer (optional); specifies that the result is the nth page of the requested data. The default value is 0
 #' @param size integer (optional); specifies the number of data items in each page. The default value is 100
@@ -74,7 +74,7 @@ ndex_find_users <- function(ndexcon, searchString="", start, size){
 
 #' Get User By Name
 #' 
-#' @param ndexcon object of class NDExConnection link{ndex_connect}
+#' @param ndexcon object of class NDExConnection \link{ndex_connect}
 #' @param name name of the user
 #' 
 #' @return list of properties describing the user (externalId, emailAddress, website, etc.). Throws error (404) if user isn't found!
@@ -100,7 +100,7 @@ ndex_find_user_byName <- function(ndexcon, name) {
 
 #' Get User By UUID
 #' 
-#' @param ndexcon object of class NDExConnection link{ndex_connect}
+#' @param ndexcon object of class NDExConnection \link{ndex_connect}
 #' @param userId character; unique ID (UUID) of the user
 #' 
 #' @return list of properties describing the user (externalId, emailAddress, website, etc.). Throws error (404) if user isn't found!
@@ -137,7 +137,7 @@ ndex_find_user_byId <- function(ndexcon, userId) {
 #' If email verification is turned on on the server, this call returns code 220 (Accepted), the location field in the header has the URL to check the status of the newly created user account.
 #' If email verification is turned on off on the server, this function returns 201 (Created). The URL for getting the newly created user is in the response body and the Location header.
 #' 
-#' @param ndexcon object of class NDExConnection link{ndex_connect}
+#' @param ndexcon object of class NDExConnection \link{ndex_connect}
 #' @param userName character; name of the new user
 #' @param password character; password for the new user
 #' @param emailAddress character (optional); email address (used for verification if enabled) 
@@ -197,7 +197,7 @@ ndex_create_user <- function(ndexcon, userName, password, emailAddress, isIndivi
 #' 
 #' Deletes the authenticated user, removing any other objects in the database that depend on the user
 #' 
-#' @param ndexcon object of class NDExConnection link{ndex_connect}
+#' @param ndexcon object of class NDExConnection \link{ndex_connect}
 #' @param userId character; unique ID (UUID) of the user
 #' 
 #' @return NULL if successfull, else an error is thrown
@@ -229,7 +229,7 @@ ndex_delete_user <- function(ndexcon, userId) {
 #' 
 #' Updates the authenticated user based on the data. Errors, if the user for ndexcon and uuid are different.
 #' 
-#' @param ndexcon object of class NDExConnection link{ndex_connect}
+#' @param ndexcon object of class NDExConnection \link{ndex_connect}
 #' @param userId character; unique ID of the user
 #' @param emailAddress character (optional); email address (used for verification if enabled) 
 #' @param isIndividual boolean (default:True); True if this account is for an individual user. False means this account is for an organization or a project etc.
@@ -287,7 +287,7 @@ ndex_update_user <- function(ndexcon, userId, emailAddress, isIndividual, displa
 #' 
 #' Verify the given user with UUID and verification code, which is set by email
 #' 
-#' @param ndexcon object of class NDExConnection link{ndex_connect}
+#' @param ndexcon object of class NDExConnection \link{ndex_connect}
 #' @param userId character; unique ID of the user
 #' @param code character; Verification code sent by email
 #' 
@@ -325,7 +325,7 @@ ndex_verify_user <- function(ndexcon, userId, code) {
 #' 
 #' Changes the authenticated user's password to the new password
 #' 
-#' @param ndexcon object of class NDExConnection link{ndex_connect}
+#' @param ndexcon object of class NDExConnection \link{ndex_connect}
 #' @param userId character; unique ID of the user
 #' @param password character; New password
 #' 
@@ -359,7 +359,7 @@ ndex_user_change_password <- function(ndexcon, userId, password) {
 #' 
 #' Causes a new password to be generated for the given user account and then emailed to the user's emailAddress
 #' 
-#' @param ndexcon object of class NDExConnection link{ndex_connect}
+#' @param ndexcon object of class NDExConnection \link{ndex_connect}
 #' @param userId character; unique ID of the user
 #' 
 #' @return Empty string on success, else error
@@ -391,7 +391,7 @@ ndex_user_mail_password <- function(ndexcon, userId) {
 #' 
 #' Causes a new password to be generated for the given user account and then emailed to the user's emailAddress
 #' 
-#' @param ndexcon object of class NDExConnection link{ndex_connect}
+#' @param ndexcon object of class NDExConnection \link{ndex_connect}
 #' @param userId character; unique ID of the user
 #' 
 #' @return Empty string on success, else error
@@ -424,7 +424,7 @@ ndex_user_forgot_password <- function(ndexcon, userId) {
 #' 
 #' Returns the permission that the user specified in the URL has on the given group. Returns an empty object if the authenticated user is not a member of this group.
 #' 
-#' @param ndexcon object of class NDExConnection link{ndex_connect}
+#' @param ndexcon object of class NDExConnection \link{ndex_connect}
 #' @param userId character; unique ID (UUID) of the user
 #' @param groupId character; unique ID (UUID) of the group
 #' 
@@ -463,7 +463,7 @@ ndex_user_show_group <- function(ndexcon, userId, groupId) {
 #' 
 #' Query finds groups for which the current user has the specified membership type. If the "type' parameter is omitted, all membership types will be returned. Returns a map which maps a group UUID to the membership type the authenticated user has.
 #' 
-#' @param ndexcon object of class NDExConnection link{ndex_connect}
+#' @param ndexcon object of class NDExConnection \link{ndex_connect}
 #' @param userId character; unique ID (UUID) of the user
 #' @param type character (optional)("MEMBER"|"GROUPADMIN"); constrains the type of the returned membership. If not set (or NULL), all permission types will be returned. 
 #' @param start integer (optional); specifies that the result is the nth page of the requested data.
@@ -510,7 +510,7 @@ ndex_user_list_groups <- function(ndexcon, userId, type=NULL, start=NULL, size=N
 #' 
 #' Get the type(s) of permission assigned to the authenticated user for the specified network. Returns a map which maps a network UUID to the highest permission assigned to the authenticated user.
 #' 
-#' @param ndexcon object of class NDExConnection link{ndex_connect}
+#' @param ndexcon object of class NDExConnection \link{ndex_connect}
 #' @param userId character; unique ID (UUID) of the user
 #' @param networkId character; unique ID (UUID) of the group
 #' @param directonly logical (default: FALSE); If directonly is set to true, permissions granted through groups are not included in the result
@@ -551,7 +551,7 @@ ndex_user_show_permission <- function(ndexcon, userId, networkId, directonly=FAL
 #' 
 #' This function returns networks for which the authenticated user is assigned the specified permission. Userid is the UUID of the authenticated user. Returns a JSON map in which the keys are network UUIDs and values are the highest permission assigned to the authenticated user.#' 
 #' 
-#' @param ndexcon object of class NDExConnection link{ndex_connect}
+#' @param ndexcon object of class NDExConnection \link{ndex_connect}
 #' @param userId character; unique ID (UUID) of the user
 #' @param type character (optional)("READ"|"WRITE"|"ADMIN"); constrains the type of the returned permission. If not set (or NULL), all permission types will be returned.
 #' @param directonly logical (default: FALSE); If directonly is set to true, permissions granted through groups are not included in the result
@@ -611,7 +611,7 @@ ndex_user_list_permissions <- function(ndexcon, userId, type=NULL, directonly=FA
 #' This function returns a list of network summary objects that the user who is specified by userid chose to display in his or her home page. 
 #' For authenticated users, this function returns the networks that the authenticated user can read, for anonymous users, this function returns only public networks.
 #' 
-#' @param ndexcon object of class NDExConnection link{ndex_connect}
+#' @param ndexcon object of class NDExConnection \link{ndex_connect}
 #' @param userId character; unique ID (UUID) of the user
 #' 
 #' @return data.frame of networks (name, description, externalId, uri, etc.) in the showcase of the specified user
@@ -648,7 +648,7 @@ ndex_user_get_showcase <- function(ndexcon, userId) {
 #' This is a convenience function designed to support "My Account" pages in NDEx applications. 
 #' It returns a list of NetworkSummary objects to display.
 #' 
-#' @param ndexcon object of class NDExConnection link{ndex_connect}
+#' @param ndexcon object of class NDExConnection \link{ndex_connect}
 #' @param userId character; unique ID (UUID) of the user
 #' 
 #' @return data.frame of networks (name, description, externalId, uri, etc.) on the account page of the specified user

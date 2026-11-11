@@ -10,6 +10,21 @@
 ################################################################################
 
 
+#' Get the default user agent of httr
+#'
+#' Returns the user agent string that httr uses by default
+#' (e.g. "libcurl/x.y.z r-curl/x.y.z httr/x.y.z"). httr does not
+#' export this function, so it is retrieved via
+#' \code{\link[utils]{getFromNamespace}} instead of the \code{:::} operator.
+#'
+#' @return character; the default httr user agent string
+#' @keywords internal
+#' @noRd
+ndex_default_ua <- function() {
+    utils::getFromNamespace("default_ua", "httr")()
+}
+
+
 #' Adds Parameters to an url
 #' 
 #' Encodes a given parameter within the url accordingly to the parameter configuration for the api. 

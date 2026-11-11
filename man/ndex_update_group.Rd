@@ -15,7 +15,7 @@ ndex_update_group(
 )
 }
 \arguments{
-\item{ndexcon}{object of class NDExConnection link{ndex_connect}}
+\item{ndexcon}{object of class NDExConnection \link{ndex_connect}}
 
 \item{groupId}{character; unique ID (UUID) of the group}
 

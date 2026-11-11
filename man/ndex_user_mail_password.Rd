@@ -7,7 +7,7 @@
 ndex_user_mail_password(ndexcon, userId)
 }
 \arguments{
-\item{ndexcon}{object of class NDExConnection link{ndex_connect}}
+\item{ndexcon}{object of class NDExConnection \link{ndex_connect}}
 
 \item{userId}{character; unique ID of the user}
 }

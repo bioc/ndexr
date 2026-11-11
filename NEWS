@@ -1,3 +1,14 @@
+ndexr 1.35.1 (Bioconductor Development 3.24)
+===========
+**Maintenance: fixes for R CMD check and BiocCheck**
+* added `inst/CITATION` with the Bioinformatics publication (Auer et al., 2018, doi:10.1093/bioinformatics/btx683)
+* replaced `httr:::default_ua()` with an internal helper `ndex_default_ua()` using `utils::getFromNamespace()`
+* imports: added `utils` and `RCX` to NAMESPACE, removed unused `plyr` and `tidyr` from Imports
+* documentation: fixed broken `\link{ndex_connect}` references, replaced deprecated `@docType package` by `"_PACKAGE"`
+* LICENSE file converted to the DCF stub required for `BSD_3_clause + file LICENSE`, full license text moved to `LICENSE.md`
+* moved `ndex_api_config.yml` from `R/` to `data-raw/` and updated references in code documentation and vignette
+* extended `.Rbuildignore` (`data-raw`, `doc`, `man-roxygen*`, `LICENSE.md`, Rd2pdf and BiocCheck output)
+
 ndexr 1.21.1 (Bioconductor Development 3.17)
 ===========
 **UPDATE: Using the RCX package for working with networks.**

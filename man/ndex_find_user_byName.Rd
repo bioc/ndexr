@@ -7,7 +7,7 @@
 ndex_find_user_byName(ndexcon, name)
 }
 \arguments{
-\item{ndexcon}{object of class NDExConnection link{ndex_connect}}
+\item{ndexcon}{object of class NDExConnection \link{ndex_connect}}
 
 \item{name}{name of the user}
 }

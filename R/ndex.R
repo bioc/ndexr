@@ -53,4 +53,7 @@
 #' ## delete it on the server
 #' ndex_delete_network(ndexcon, networkId)
 #' }
-NULL
+#' @importFrom utils packageVersion tail
+#' @import RCX
+#' @keywords internal
+"_PACKAGE"

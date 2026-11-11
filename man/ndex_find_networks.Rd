@@ -7,7 +7,7 @@
 ndex_find_networks(ndexcon, searchString = "", accountName, start, size)
 }
 \arguments{
-\item{ndexcon}{object of class NDExConnection link{ndex_connect}}
+\item{ndexcon}{object of class NDExConnection \link{ndex_connect}}
 
 \item{searchString}{string by which to search}
 

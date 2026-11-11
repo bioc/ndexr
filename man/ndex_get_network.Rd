@@ -7,7 +7,7 @@
 ndex_get_network(ndexcon, networkId)
 }
 \arguments{
-\item{ndexcon}{object of class NDExConnection link{ndex_connect}}
+\item{ndexcon}{object of class NDExConnection \link{ndex_connect}}
 
 \item{networkId}{unique ID of the network}
 }

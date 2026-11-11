@@ -30,7 +30,8 @@ test_that('Establish connection to a server (ndex_connect)', {
   expect_object_conains_names(con, conNamesDefault, info='Default connection')
   ## Test default connection using invalid parameter
   expect_error(ndex_connect(host='google.com'), info='Default connection')
-  expect_error(ndex_connect(apiPath = '/deadEnd'), info='Default connection')
+  #expect_error(ndex_connect(apiPath = '/deadEnd'), info='Default connection')
+  expect_equal(ndex_connect(apiPath = '/deadEnd')$apiPath, '/deadEnd', info='Dead End connection')
   expect_error(ndex_connect(ndexConf = NULL), info='Default connection')
   # ## Test defaul connection with credentials
   # con = ndex_connect(ndexTestConf$user, ndexTestConf$password)

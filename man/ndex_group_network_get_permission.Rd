@@ -34,8 +34,10 @@ ndexcon = ndex_connect()
 groups = ndex_find_groups(ndexcon,"Ideker Lab")
 groupId = groups[1,"externalId"]
 ## List networks of the group
-networks = ndex_group_list_networks(ndexcon, groupId)
-networkId = names(networks)[1]
-## Get group's permission to the network
-#group = ndex_group_network_get_permission(ndexcon, groupId, networkId)
+if(!is.null(groupId)){
+    networks = ndex_group_list_networks(ndexcon, groupId)
+    networkId = names(networks)[1]
+    ## Get group's permission to the network
+    #group = ndex_group_network_get_permission(ndexcon, groupId, networkId)
+}
 }

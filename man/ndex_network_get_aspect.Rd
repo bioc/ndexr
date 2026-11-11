@@ -7,7 +7,7 @@
 ndex_network_get_aspect(ndexcon, networkId, aspect, size)
 }
 \arguments{
-\item{ndexcon}{object of class NDExConnection link{ndex_connect}}
+\item{ndexcon}{object of class NDExConnection \link{ndex_connect}}
 
 \item{networkId}{character; unique ID of the network}
 

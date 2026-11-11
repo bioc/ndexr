@@ -7,7 +7,7 @@
 ndex_group_set_membership(ndexcon, groupId, userId, type = "MEMBER")
 }
 \arguments{
-\item{ndexcon}{object of class NDExConnection link{ndex_connect}}
+\item{ndexcon}{object of class NDExConnection \link{ndex_connect}}
 
 \item{groupId}{character; unique ID (UUID) of the group}
 

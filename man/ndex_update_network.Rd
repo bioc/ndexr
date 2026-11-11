@@ -7,7 +7,7 @@
 ndex_update_network(ndexcon, rcx, networkId)
 }
 \arguments{
-\item{ndexcon}{object of class NDExConnection link{ndex_connect}}
+\item{ndexcon}{object of class NDExConnection \link{ndex_connect}}
 
 \item{rcx}{\code{\link[RCX]{RCX-object}} object}
 

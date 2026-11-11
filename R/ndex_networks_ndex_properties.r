@@ -25,7 +25,7 @@
 #' 
 #' This function retrieves the user or group permissions for a network
 #' 
-#' @param ndexcon object of class NDExConnection link{ndex_connect}
+#' @param ndexcon object of class NDExConnection \link{ndex_connect}
 #' @param networkId unique ID of the network
 #' @param type character ("user"|"group"); specifies whether user or group permissions should be returned
 #' @param permission character (optional)("READ"|"WRITE"|"ADMIN"); constrains the type of the returned membership. If not set (or NULL), all permission types will be returned. 
@@ -92,7 +92,7 @@ ndex_network_get_permission <- function(ndexcon, networkId, type, permission, st
 #' 
 #' Updates the permission of a user specified by userid or group specified by groupid for the network
 #' 
-#' @param ndexcon object of class NDExConnection link{ndex_connect}
+#' @param ndexcon object of class NDExConnection \link{ndex_connect}
 #' @param networkId unique ID of the network
 #' @param user character (optional); uuid of the user. Only either user or group may be set!
 #' @param group character (optional); uuid of the group. Only either user or group may be set!
@@ -147,7 +147,7 @@ ndex_network_update_permission <- function(ndexcon, networkId, user=NULL, group=
 #' 
 #' Removes any permission for the network for the user or group specified
 #' 
-#' @param ndexcon object of class NDExConnection link{ndex_connect}
+#' @param ndexcon object of class NDExConnection \link{ndex_connect}
 #' @param networkId unique ID of the network
 #' @param user character (optional); uuid of the user. Only either user or group may be set!
 #' @param group character (optional); uuid of the group. Only either user or group may be set!
@@ -198,7 +198,7 @@ ndex_network_delete_permission <- function(ndexcon, networkId, user=NULL, group=
 #' 
 #' Network System properties are the properties that describe the network's status in a particular NDEx server but that are not part of the corresponding CX network object.
 #' 
-#' @param ndexcon object of class NDExConnection link{ndex_connect}
+#' @param ndexcon object of class NDExConnection \link{ndex_connect}
 #' @param networkId unique ID of the network
 #' @param readOnly boolean (optional); Sets the network to only readable. At least one of readOnly, visibility or showcase have to be set!
 #' @param visibility character (optional) ('PUBLIC'|'PRIVATE'); Sets the network to only readable. At least one of readOnly, visibility or showcase have to be set!
@@ -257,7 +257,7 @@ ndex_network_set_systemProperties <- function(ndexcon, networkId, readOnly=NULL,
 
 ## Get Network Sample
 ## 
-## @param ndexcon object of class NDExConnection link{ndex_connect}
+## @param ndexcon object of class NDExConnection \link{ndex_connect}
 ## @param networkId character; unique ID (UUID) of the network
 ## 
 ## @return Network sample            
@@ -268,7 +268,7 @@ ndex_network_set_systemProperties <- function(ndexcon, networkId, readOnly=NULL,
 #
 ## Set Sample Network    
 ## 
-## @param ndexcon object of class NDExConnection link{ndex_connect}
+## @param ndexcon object of class NDExConnection \link{ndex_connect}
 ## @param networkId character; unique ID (UUID) of the network
 ## 
 ## @return NULL on success        
@@ -285,7 +285,7 @@ ndex_network_set_systemProperties <- function(ndexcon, networkId, readOnly=NULL,
 #' 
 #' Updates the profile information of the network. Any profile attributes specified will be updated but attributes that are not specified will have no effect - omission of an attribute does not mean deletion of that attribute.
 #' 
-#' @param ndexcon object of class NDExConnection link{ndex_connect}
+#' @param ndexcon object of class NDExConnection \link{ndex_connect}
 #' @param networkId unique ID of the network
 #' @param name character (optional); Changes the name the network. At least one of name, description or version have to be set!
 #' @param description character (optional); Changes the description the network. At least one of name, description or version have to be set!
@@ -336,7 +336,7 @@ ndex_network_update_profile <- function(ndexcon, networkId, name=NULL, descripti
 
 ## Set Network Properties
 ## 
-## @param ndexcon object of class NDExConnection link{ndex_connect}
+## @param ndexcon object of class NDExConnection \link{ndex_connect}
 ## @param networkId character; unique ID (UUID) of the network
 ## 
 ## @return NULL on success        

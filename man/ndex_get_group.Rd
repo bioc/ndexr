@@ -7,7 +7,7 @@
 ndex_get_group(ndexcon, groupId)
 }
 \arguments{
-\item{ndexcon}{object of class NDExConnection link{ndex_connect}}
+\item{ndexcon}{object of class NDExConnection \link{ndex_connect}}
 
 \item{groupId}{character; unique ID (UUID) of the group}
 }
@@ -32,5 +32,7 @@ ndexcon = ndex_connect()
 groups = ndex_find_groups(ndexcon,"Ideker Lab")
 groupId = groups[1,"externalId"]
 ## Get group information
-group = ndex_get_group(ndexcon, groupId)
+if(!is.null(groupId)){
+    group = ndex_get_group(ndexcon, groupId)
+}
 }
